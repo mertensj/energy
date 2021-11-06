@@ -1,4 +1,20 @@
 #!/usr/bin/python3
+# Use P1 meter API
+#   API HomeWizard WiFi P1 Meter
+#   https://homewizard-energy-api.readthedocs.io/
+# Fetch all JSON data
+# inject into InfluxDB V1 running on computer 'compaq.local'
+#
+# A single line of text in line protocol format represents one data point in InfluxDB. 
+# It informs InfluxDB of the point’s measurement, tag set, field set, and timestamp.
+# - measurement : log
+# - tag set     : sensor=P1
+# - field set   : t1 / t2 / ap / gas
+#        t1 = DAY counter , cummulative in kWh
+#        t2 = NIGHT counter , cummulative in kWh
+#        ap = activer power in Watt
+#        gas = cummulative gas counter in m3
+#
 
 import json
 import requests
