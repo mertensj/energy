@@ -23,7 +23,7 @@ import neopixel
 
 pixels = neopixel.NeoPixel(board.D18,1)
 
-DEBUG=1
+DEBUG=0
 
 while True:
   r = requests.get('http://192.168.0.156/api/v1/data')
@@ -46,22 +46,28 @@ while True:
     #print('')
 
   if(ap<500):
-    print('<500 => BLUE')
+    if(DEBUG):
+      print('<500 => BLUE')
     pixels[0] = (0,0,255)
   elif(ap<1000):
-    print('<1000 => GREEN')
+    if(DEBUG):
+      print('<1000 => GREEN')
     pixels[0] = (0,255,0)
   elif(ap<1500):
-    print('<1500 => CHARTREUSE')
+    if(DEBUG):
+      print('<1500 => CHARTREUSE')
     pixels[0] = (127,255,0)
   elif(ap<2000):
-    print('<2000 => YELLOW')
+    if(DEBUG):
+      print('<2000 => YELLOW')
     pixels[0] = (255,255,0)
   elif(ap<3000):
-    print('<3000 => ORANGE')
+    if(DEBUG):
+      print('<3000 => ORANGE')
     pixels[0] = (255,127,0)
   else:
-    print('>3000 => RED')
+    if(DEBUG):
+      print('>3000 => RED')
     pixels[0] = (255,0,0)
 
   time.sleep(5)
