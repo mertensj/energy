@@ -1,5 +1,18 @@
 # energy
 Python Scripts to retrieve actual energy consumption from P1 Meter (HomeWizard)
+
+More info on P1 meter can be found on :
+ https://www.homewizard.nl/energy
+
+ API HomeWizard WiFi P1 Meter
+ https://homewizard-energy-api.readthedocs.io/
+
+ The /api/v1/data endpoint always returns the most recent measurement.
+ The update frequency depends on the device and, in case of the HWE-P1,
+ the smart meter that it is connected to.
+ With a SMR 5.0 meter, this is every second for power and every 5 minutes for gas.
+
+
 <h2>01_json.py</h2>
    Decode the JSON string which is returned from the P1 meter https interface
 <h2>02_influxdb.py</h2>
