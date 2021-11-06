@@ -8,8 +8,8 @@ Python Scripts to retrieve actual energy consumption from P1 Meter (HomeWizard)
 <h2>03_led.py</h2>
    Idem as 01 , but now the data of the actual power consumption is used to color an addressable WS2812B LED
    connected to a Raspberry PI.<BR>
-* Blue = low power consumption 
-* Green 
-* Yellow
-* Red = high power consumption
+     Blue = low power consumption<BR> 
+     Green <BR>
+     Yellow<BR>
+     Red = high power consumption<BR>
    LED color status is updated every X seconds
