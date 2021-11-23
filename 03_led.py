@@ -22,8 +22,10 @@ import board
 import neopixel
 
 pixels = neopixel.NeoPixel(board.D18,1)
+pixels.brightness = 0.1
 
 DEBUG=0
+FLIP=0
 
 while True:
   r = requests.get('http://192.168.0.156/api/v1/data')
@@ -70,6 +72,13 @@ while True:
       print('>3000 => RED')
     pixels[0] = (255,0,0)
 
-  time.sleep(5)
+  if(FLIP==0):
+    pixels.brightness = 0.01
+    FLIP=1
+  else:
+    pixels.brightness = 0.1
+    FLIP=0
+
+  time.sleep(1)
 
 

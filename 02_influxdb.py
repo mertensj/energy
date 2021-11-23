@@ -41,7 +41,9 @@ if(DEBUG):
 
 if(DEBUG):
   print(packages_str)
-
+#
+# WRITE TO INFLUXDB : COMPAQ
+#
 client = InfluxDBClient(host='compaq.local', port=8086)
 if(DEBUG):
   print(client.get_list_database())
@@ -56,5 +58,14 @@ line = 'log,sensor=P1 ' + \
 
 client.write([line], {'db': 'energydb'}, 204, 'line')
 client.close()
+
+
+#
+# WRITE TO INFLUXDB : PROBOOK
+#
+client = InfluxDBClient(host='192.168.0.160', port=8086)
+client.write([line], {'db': 'energydb'}, 204, 'line')
+client.close()
+
 
 
