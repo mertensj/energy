@@ -15,12 +15,15 @@ More info on P1 meter can be found on :
 
 <h2>01_json.py</h2>
    Decode the JSON string which is returned from the P1 meter https interface
+
 <h2>02_influxdb.py</h2>
    Idem as 01 , but now inject this data in an Influx DB run on another machine<BR>
-   This script is called each minute from a crob jon on a computer in the same subnet.
- 
-   Install influxdb library for python3<BR>
+   Dependency on influxdb python library.<br>
+   <br> 
+   Install this influxdb library for python3 with following command:<BR>
    $ pip install influxdb
+  
+   The script is called each minute from a crob jon on a computer in the same subnet.<br>
  
    crontab -e<BR>
        # m h  dom mon dow   command <BR>
