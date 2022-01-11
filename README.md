@@ -19,11 +19,11 @@ More info on P1 meter can be found on :
    Idem as 01 , but now inject this data in an Influx DB run on another machine<BR>
    This script is called each minute from a crob jon on a computer in the same subnet.
  
-   Install influxdb library for python3
+   Install influxdb library for python3<BR>
    $ pip install influxdb
  
-   crontab -e
-       # m h  dom mon dow   command
+   crontab -e<BR>
+       # m h  dom mon dow   command <BR>
        * * * * * /home/jan/git/energy/02_influxdb.py
 
  
