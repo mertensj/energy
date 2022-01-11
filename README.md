@@ -17,7 +17,16 @@ More info on P1 meter can be found on :
    Decode the JSON string which is returned from the P1 meter https interface
 <h2>02_influxdb.py</h2>
    Idem as 01 , but now inject this data in an Influx DB run on another machine<BR>
-   This script is called each minute from a crob jon on a raspberry PI
+   This script is called each minute from a crob jon on a computer in the same subnet.
+ 
+   Install influxdb library for python3
+   $ pip install influxdb
+ 
+   crontab -e
+       # m h  dom mon dow   command
+       * * * * * /home/jan/git/energy/02_influxdb.py
+
+ 
 <h2>03_led.py</h2>
    Idem as 01 , but now the data of the actual power consumption is used to color an addressable WS2812B LED
    connected to a Raspberry PI.<BR>
