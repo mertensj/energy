@@ -22,9 +22,8 @@ More info on P1 meter can be found on :
    <br> 
    Install this influxdb library for python3 with following command:<BR>
    $ pip install influxdb
-   <br>
+   <br><br>
    The script is called each minute from a crob jon on a computer in the same subnet.<br>
-   <br>
    crontab -e<BR>
        # m h  dom mon dow   command <BR>
        * * * * * /home/jan/git/energy/02_influxdb.py
